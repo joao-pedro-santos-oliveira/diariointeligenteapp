@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      journal_entries: {
+        Row: {
+          audio_path: string | null
+          created_at: string
+          id: string
+          insights: string | null
+          insights_audio_path: string | null
+          title: string | null
+          transcription: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          audio_path?: string | null
+          created_at?: string
+          id?: string
+          insights?: string | null
+          insights_audio_path?: string | null
+          title?: string | null
+          transcription?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          audio_path?: string | null
+          created_at?: string
+          id?: string
+          insights?: string | null
+          insights_audio_path?: string | null
+          title?: string | null
+          transcription?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
